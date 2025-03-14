@@ -7,7 +7,7 @@ class DicodingStudent {
   int incrementAge() {
     // TODO 1
 
-    return 0;
+    return age + 1;
 
     // End of TODO 1
   }
@@ -15,7 +15,9 @@ class DicodingStudent {
   Future<String> getStudentInfo() {
     // TODO 2
 
-    return Future.value("");
+    return Future.delayed(Duration(seconds: 3), () {
+      return 'Nama Lengkap: $fullName, Umur: $age tahun';
+    });
 
     // End of TODO 2
   }
@@ -24,7 +26,8 @@ class DicodingStudent {
 dynamic createStudent() {
   // TODO 3
 
-  return null;
+  var dicodingStudent = DicodingStudent("abc", 17);
+  return dicodingStudent;
 
   // End of TODO 3
 }
